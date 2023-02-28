@@ -25,7 +25,7 @@ public class Apple extends GraphicalObject {
 
     @Override
     public void update(double dt) {
-        y = y + 100*(radius/100)*dt;
+        y = y + 75*(speed/75)*dt;
 
         if(y > 1030){
             jumpBack();
