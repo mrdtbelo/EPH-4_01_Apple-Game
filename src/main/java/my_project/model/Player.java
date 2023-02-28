@@ -46,6 +46,7 @@ public class Player extends InteractiveGraphicalObject {
         if(direction == 2){
             x = x - speed*dt;
         }
+
     }
 
     @Override
