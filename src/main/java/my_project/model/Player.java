@@ -64,5 +64,6 @@ public class Player extends InteractiveGraphicalObject {
         if(key == keyToGoRight){
             direction = -1;
         }
+
     }
 }

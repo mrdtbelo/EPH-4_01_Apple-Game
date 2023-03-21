@@ -1,17 +1,12 @@
 package my_project.model;
 
-import KAGO_framework.model.GraphicalObject;
 import KAGO_framework.view.DrawTool;
 
-public class Apple extends GraphicalObject {
+public class Apple extends Fruit {
 
-    //Attribute
-    private double speed;
 
     public Apple(double x, double y){
-        this.x = x;
-        this.y = y;
-        speed = 150;
+        super(x,y);
         radius = 30;
     }
 
@@ -25,17 +20,9 @@ public class Apple extends GraphicalObject {
 
     @Override
     public void update(double dt) {
-        y = y + speed*dt;
+        super.update(dt);
 
-        if(y > 1000){
-            jumpBack();
-        }
         //TODO 01 Ein Apfel soll von oben herab fallen. Sobald er unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 02).
     }
-    public void jumpBack(){
-        y = -32;
-        x = Math.random()*(1000-2*radius) + radius;
-    }
-
     //TODO 02 Lege eine Methode jumpBack() an, die bei Aufruf das Apple-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
 }
