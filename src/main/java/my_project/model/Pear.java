@@ -4,10 +4,15 @@ import KAGO_framework.view.DrawTool;
 
 public class Pear extends Fruit {
 
+    //private double timer
+    //private double speedX
+
     public Pear(double x, double y){
         super(x,y);
         width = 25;
         height = 35;
+        //timer = 0;
+        //speedX = 50;
     }
 
     @Override
@@ -20,6 +25,12 @@ public class Pear extends Fruit {
 
     @Override
     public void update(double dt) {
+// timer = timer+dt;
+       // x = x+speedx*dt
+        //if (timer>2){
+        //speedX = speedx*(-1)
+        //timer = 0
+
 
         super.update(dt);
 
