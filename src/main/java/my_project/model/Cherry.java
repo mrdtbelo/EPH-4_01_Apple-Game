@@ -6,12 +6,12 @@ import java.awt.*;
 
 public class Cherry extends Fruit {
 
-    private double speedBuff;
+
 
     public Cherry(double x, double y) {
         super(x, y);
         radius = 30;
-        speedBuff = Math.random()*8+15;
+
     }
 
     public void draw(DrawTool drawTool) {
