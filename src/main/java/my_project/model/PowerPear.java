@@ -8,10 +8,10 @@ public class PowerPear extends Pear {
 
     public PowerPear(double x, double y) {
         super(x, y);
-        speedBuff = Math.random()*8+15;
+        speedBuff = Math.random()*10+15;
     }
     public void draw(DrawTool drawTool){
-        drawTool.setCurrentColor(255,0,0,255);
+        drawTool.setCurrentColor(116,190,88,0);
         drawTool.drawFilledCircle(x,y,radius);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawCircle(x,y,radius);

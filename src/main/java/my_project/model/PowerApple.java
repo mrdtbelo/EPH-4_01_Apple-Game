@@ -12,7 +12,7 @@ public class PowerApple extends Apple{
         speedBuff = Math.random()*8+15;
     }
     public void draw(DrawTool drawTool){
-        drawTool.setCurrentColor(255,0,0,255);
+        drawTool.setCurrentColor(255,8,0,0);
         drawTool.drawFilledCircle(x,y,radius);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawCircle(x,y,radius);

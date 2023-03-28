@@ -20,6 +20,8 @@ public class ProgramController {
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
 
+    //private Background background;
+
     private Apple apple01;
     private Apple apple02;
     private Apple apple03;
@@ -53,6 +55,9 @@ public class ProgramController {
     public void startProgram() {
         double xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
         double yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+
+        //background01 = new Background()
+        //apple
         apple01 = new Apple(xPos, yPos);
         viewController.draw(apple01);
         double xpos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
@@ -74,6 +79,7 @@ public class ProgramController {
 
         xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
         yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        //pear
         pear01 = new Pear(xPos, yPos);
         viewController.draw(pear01);
         xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
@@ -93,9 +99,14 @@ public class ProgramController {
         pear05 = new Pear(xPos, yPos);
         viewController.draw(pear05);
 
+        //player
         player01 = new Player(50, Config.WINDOW_HEIGHT - 100);
         viewController.draw(player01);
         viewController.register(player01);
+
+        //player02 = new Player(250, Config.WINDOW_HEIGHT - 100);
+        //viewController.draw(player02);
+        //viewController.register(player02);
     }
 
     /**

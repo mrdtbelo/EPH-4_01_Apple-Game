@@ -1,5 +1,6 @@
 package my_project.model;
 
+import java.awt.*;
 import KAGO_framework.model.GraphicalObject;
 import KAGO_framework.view.DrawTool;
 
@@ -28,7 +29,7 @@ public class Background extends GraphicalObject {
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(25,100,0,255);
+        drawTool.setCurrentColor(231,254,255,255);
         drawTool.drawFilledRectangle(0,0,1600,1024);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.formatText("Arial",1,25);
@@ -36,8 +37,7 @@ public class Background extends GraphicalObject {
     }
 
     @Override
-    public void update(double dt) {
-
+    public void update(double dt){
     }
 
 }

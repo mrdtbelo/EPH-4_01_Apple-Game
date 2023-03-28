@@ -49,7 +49,7 @@ public class Player extends InteractiveGraphicalObject {
     @Override
     public void keyPressed(int key) {
         if(key == keyToGoLeft){
-            direction = 2;
+            direction = 0;
         }
         if(key == keyToGoRight){
             direction = 0;
