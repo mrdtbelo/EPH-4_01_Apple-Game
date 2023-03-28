@@ -11,7 +11,7 @@ public class Cherry extends Fruit{
     }
 
     public void draw(DrawTool drawTool){
-        drawTool.setCurrentColor(121, 6, 4, 0);
+        drawTool.setCurrentColor(121, 6, 4, 255);
         drawTool.drawFilledCircle(12, 7, 9);
         drawTool.drawFilledCircle(0, 15, 10);
     }
