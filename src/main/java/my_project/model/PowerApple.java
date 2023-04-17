@@ -25,7 +25,7 @@ public class PowerApple extends Apple {
         drawTool.setCurrentColor(0, 0, 0, 110);
         drawTool.drawCircle(x, y, radius);
         drawTool.setCurrentColor(59, 46, 42, 110);
-        drawTool.drawFilledRectangle(x - 2.5, y - 10, 5, 10);
+        drawTool.drawFilledRectangle(x - 3.5, y - 30, 7, 15);
     }
 
     public void update(double dt) {
@@ -36,10 +36,7 @@ public class PowerApple extends Apple {
         }
         timer = timer + dt;
         super.update(dt);
-        //x = x + speedX * dt;
-        //if (timer < 0) {
-            speedX = speedX * (0);
-        //}
+
 
     }
 }

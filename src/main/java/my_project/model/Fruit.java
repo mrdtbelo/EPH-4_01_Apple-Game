@@ -3,6 +3,8 @@ package my_project.model;
 import KAGO_framework.Config;
 import KAGO_framework.model.GraphicalObject;
 
+import javax.swing.*;
+
 public class Fruit extends GraphicalObject {
 
     protected double speed;
@@ -22,5 +24,11 @@ public class Fruit extends GraphicalObject {
     public void jumpBack(){
         y = -200;
         x = Math.random() * 800 +  100;
-    }
+   }
+   //public void CheckAndHandleCollision(){
+       // if(collidesWith(player01)){
+            jumpBack();
+        //}
+   //}
+
 }
