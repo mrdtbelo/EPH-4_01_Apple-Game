@@ -6,7 +6,7 @@ public class Apple extends Fruit {
 
     public Apple(double x, double y){
         super(x,y);
-        radius = 30;
+        radius = 20;
     }
 
     @Override

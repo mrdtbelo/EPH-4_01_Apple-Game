@@ -12,6 +12,7 @@ public class MainProgram {
      * befindet. Dort sollte deine Arbeit beginnen.
      */
     public static void main (String[] args){
+
         MainController.startFramework();
     }
 }

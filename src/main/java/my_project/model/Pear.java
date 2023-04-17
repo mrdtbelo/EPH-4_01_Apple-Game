@@ -4,15 +4,15 @@ import KAGO_framework.view.DrawTool;
 
 public class Pear extends Fruit {
 
-    //private double timer;
-    //private double speedX;
+    private double timer;
+    private double speedX;
 
     public Pear(double x, double y) {
         super(x, y);
         width = 25;
         height = 35;
-        //timer = 0;
-        //speedX = 50;
+        timer = 0;
+        speedX = 50;
     }
 
     @Override
@@ -24,15 +24,18 @@ public class Pear extends Fruit {
 
     @Override
     public void update(double dt) {
-        //timer = timer + dt;
-        //x = x + speedX * dt;
-        //if (timer > 2) {
-          //  speedX = speedX * (-1);
+        timer = timer + dt;
+        x = x + speedX * dt;
+        if (timer > 2) {
+            speedX = speedX * (-1);
+        }
+        timer = timer + dt;
+        super.update(dt);
+        x = x + speedX * dt;
+        if(timer < 0){
+            speedX = speedX * (0);
+        }
 
-        //timer = 0;
-
-
-            super.update(dt);
 
         }
         //TODO 03 Eine Birne soll von oben herab fallen. Sobald sie unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 04).

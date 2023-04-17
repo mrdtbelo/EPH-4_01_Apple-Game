@@ -3,10 +3,7 @@ package my_project.control;
 import KAGO_framework.control.Drawable;
 import KAGO_framework.control.ViewController;
 import my_project.Config;
-import my_project.model.Apple;
-import my_project.model.Pear;
-import my_project.model.Player;
-import my_project.model.PowerApple;
+import my_project.model.*;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -16,24 +13,63 @@ public class ProgramController {
 
     //Attribute
 
-
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
 
-    //private Background background;
+    private Background background01;
 
+    //landscape
+    private Landscape landscape01;
+
+    //mountains
+    private Mountain mountain01;
+    private Mountain mountain02;
+    private Mountain mountain03;
+    private Mountain mountain04;
+
+    //house
+    private House house01;
+
+    //river
+    private River river01;
+
+    //clouds
+    private Cloud cloud01;
+    private Cloud cloud02;
+    private Cloud cloud03;
+    private Cloud cloud04;
+    private Cloud cloud05;
+    private Cloud cloud06;
+    private Cloud cloud07;
+    private Cloud cloud08;
+    private Cloud cloud09;
+    private Cloud cloud10;
+
+    //apples
     private Apple apple01;
     private Apple apple02;
     private Apple apple03;
     private Apple apple04;
+
     private PowerApple powerApple01;
 
+    //cherries
+    private Cherry cherry01;
+    private Cherry cherry02;
+    private Cherry cherry03;
+    private Cherry cherry04;
+
+    //pears
     private Pear pear01;
     private Pear pear02;
     private Pear pear03;
     private Pear pear04;
     private Pear pear05;
+
+    //private PowerPear01;
+
     private Player player01;
+    private Player player02;
 
 
     /**
@@ -56,30 +92,82 @@ public class ProgramController {
         double xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
         double yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
 
-        //background01 = new Background()
-        //apple
+
+        background01 = new Background();
+
+        //landscape
+        landscape01 = new Landscape(0,0);
+        viewController.draw(landscape01);
+
+        //mountains
+        mountain01 = new Mountain(-5,360 );
+        viewController.draw(mountain01);
+        mountain02 = new Mountain(340,400 );
+        viewController.draw(mountain02);
+        mountain03 = new Mountain(560,360 );
+        viewController.draw(mountain03);
+        mountain04 = new Mountain(680,450 );
+        viewController.draw(mountain04);
+
+        house01 = new House(350,360);
+        viewController.draw(house01);
+
+        //river
+        river01 = new River (80,400);
+        viewController.draw(river01);
+
+        //clouds
+        cloud01 = new Cloud(-45,35,10);
+        viewController.draw(cloud01);
+        cloud02 = new Cloud(160,50,15);
+        viewController.draw(cloud02);
+        cloud03 = new Cloud(100,115,30);
+        viewController.draw(cloud03);
+        cloud04 = new Cloud(350,190,25);
+        viewController.draw(cloud04);
+        cloud05 = new Cloud(-380,122,35);
+        viewController.draw(cloud05);
+        cloud06 = new Cloud(560,110,15);
+        viewController.draw(cloud06);
+        cloud07 = new Cloud(10,130,20);
+        viewController.draw(cloud07);
+        cloud08 = new Cloud(620,83,20);
+        viewController.draw(cloud08);
+        cloud09 = new Cloud(230,40,15);
+        viewController.draw(cloud09);
+        cloud01 = new Cloud(140,210,10);
+        viewController.draw(cloud10);
+
+        //apples
         apple01 = new Apple(xPos, yPos);
         viewController.draw(apple01);
-        double xpos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
-        double ypos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
-        apple02 = new Apple(xpos, ypos);
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        apple02 = new Apple(xPos, yPos);
         viewController.draw(apple02);
-        double x1 = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
-        double y1 = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
-        apple03 = new Apple(x1, y1);
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        apple03 = new Apple(xPos, yPos);
         viewController.draw(apple03);
-        double x2 = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
-        double y2 = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
-        apple04 = new Apple(x2, y2);
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        apple04 = new Apple(xPos, yPos);
         viewController.draw(apple04);
-        double x3 = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
-        double y3 = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
-        powerApple01 = new PowerApple(x3, y3);
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+        powerApple01 = new PowerApple(xPos, yPos);
         viewController.draw(powerApple01);
 
         xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
         yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
-        //pear
+
+        //cherries
+        cherry01 = new Cherry(xPos, yPos);
+        viewController.draw(apple01);
+        xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
+        yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
+
+        //pears
         pear01 = new Pear(xPos, yPos);
         viewController.draw(pear01);
         xPos = Math.random() * (Config.WINDOW_WIDTH - 50) + 50;
@@ -98,15 +186,17 @@ public class ProgramController {
         yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
         pear05 = new Pear(xPos, yPos);
         viewController.draw(pear05);
+        powerApple01 = new PowerApple(xPos, yPos);
+        viewController.draw(powerApple01);
 
         //player
         player01 = new Player(50, Config.WINDOW_HEIGHT - 100);
         viewController.draw(player01);
         viewController.register(player01);
 
-        //player02 = new Player(250, Config.WINDOW_HEIGHT - 100);
-        //viewController.draw(player02);
-        //viewController.register(player02);
+        player02 = new Player(250, Config.WINDOW_HEIGHT - 100);
+        viewController.draw(player02);
+        viewController.register(player02);
     }
 
     /**

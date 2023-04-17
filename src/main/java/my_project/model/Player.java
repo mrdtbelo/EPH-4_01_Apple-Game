@@ -22,7 +22,7 @@ public class Player extends InteractiveGraphicalObject {
         this.y = y;
         speed = 150;
         width = 80;
-        height = 40;
+        height = 300;
 
         this.keyToGoLeft    = KeyEvent.VK_A;
         this.keyToGoRight   = KeyEvent.VK_D;
@@ -49,7 +49,7 @@ public class Player extends InteractiveGraphicalObject {
     @Override
     public void keyPressed(int key) {
         if(key == keyToGoLeft){
-            direction = 0;
+            direction = 2;
         }
         if(key == keyToGoRight){
             direction = 0;
