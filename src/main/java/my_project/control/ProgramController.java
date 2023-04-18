@@ -70,7 +70,7 @@ public class ProgramController extends GraphicalObject {
     //private PowerPear01;
 
     private Player player01;
-    private Player player02;
+    //private Player player02;
 
 
     /**
@@ -136,7 +136,7 @@ public class ProgramController extends GraphicalObject {
         viewController.draw(cloud08);
         cloud09 = new Cloud(230,40,15);
         viewController.draw(cloud09);
-        cloud01 = new Cloud(140,210,10);
+        cloud10 = new Cloud(140,210,10);
         viewController.draw(cloud10);
 
         //apples
@@ -187,17 +187,16 @@ public class ProgramController extends GraphicalObject {
         yPos = Math.random() * (Config.WINDOW_HEIGHT - 50) + 50;
         pear05 = new Pear(xPos, yPos);
         viewController.draw(pear05);
-        powerApple01 = new PowerApple(xPos, yPos);
-        viewController.draw(powerApple01);
+
 
         //player
         player01 = new Player(50, Config.WINDOW_HEIGHT - 100);
         viewController.draw(player01);
         viewController.register(player01);
 
-        player02 = new Player(250, Config.WINDOW_HEIGHT - 100);
-        viewController.draw(player02);
-        viewController.register(player02);
+        //player02 = new Player(250, Config.WINDOW_HEIGHT - 100);
+        //viewController.draw(player02);
+        //viewController.register(player02);
 
 
     }
@@ -208,9 +207,26 @@ public class ProgramController extends GraphicalObject {
      * @param dt Zeit seit letzter Frame
      */
     public void updateProgram(double dt) {
+        checkAndHandleCollision(apple01);
+        checkAndHandleCollision(apple02);
+        checkAndHandleCollision(apple03);
+        checkAndHandleCollision(apple04);
+        checkAndHandleCollision(powerApple01);
+
+        checkAndHandleCollision(pear01);
+        checkAndHandleCollision(pear02);
+        checkAndHandleCollision(pear03);
+        checkAndHandleCollision(pear04);
+        checkAndHandleCollision(pear05);
 
         //TODO 08 Nachdem Sie die TODOs 01-07 erledigt haben: Setzen Sie um, dass im Falle einer Kollision (siehe TODO 06 bzw. 07) zwischen dem Spieler und dem Apfel bzw. dem Spieler und der Birne, die jumpBack()-Methode von dem Apfel bzw. der Birne aufgerufen wird.
         //Weitere TODOs folgen und werden im Unterricht formuliert. Spätestens nach TODO 08 sollte der Aufbau des Projekts durchdacht werden.
+    }
+
+    public void checkAndHandleCollision(Fruit f){
+        if(f.collidesWith(player01)){
+            f.jumpBack();
+        }
     }
 }
 

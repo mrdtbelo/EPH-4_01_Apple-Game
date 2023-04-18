@@ -43,6 +43,9 @@ public class Player extends InteractiveGraphicalObject {
         if(direction == 0){
             x = x + speed*dt;
         }
+        if(direction == 2){
+            x = x - speed*dt;
+        }
 
     }
 

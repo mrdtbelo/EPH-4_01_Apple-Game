@@ -25,10 +25,4 @@ public class Fruit extends GraphicalObject {
         y = -200;
         x = Math.random() * 800 +  100;
    }
-   //public void CheckAndHandleCollision(){
-       // if(collidesWith(player01)){
-            jumpBack();
-        //}
-   //}
-
 }

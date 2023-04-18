@@ -13,6 +13,6 @@ public class Landscape extends GraphicalObject {
         drawTool.setCurrentColor(137,207,240,255);
         drawTool.drawFilledRectangle(0,0,1029,360);
         drawTool.setCurrentColor(33,140,0,255);
-        drawTool.drawFilledRectangle(0,360,1029,360);
+        drawTool.drawFilledRectangle(0,360,1029,1029);
     }
 }
